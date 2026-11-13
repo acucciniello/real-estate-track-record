@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Fix-and-flip and rental experience for hard-money lender review. Antonio Cucciniello."
+    />
+    <title>Antonio Cucciniello Real Estate Track Record</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">Real estate track record</p>
+        <h1 id="site-title">Antonio Cucciniello</h1>
+        <p class="subtitle">Real Estate Track Record</p>
+        <p class="lede" id="site-summary"></p>
+        <dl class="meta" id="site-meta"></dl>
+      </header>
+
+      <main id="main">
+        <div class="tabs" role="tablist" aria-label="Track record views">
+          <button
+            type="button"
+            class="tab is-active"
+            role="tab"
+            id="tab-flips"
+            aria-selected="true"
+            aria-controls="panel"
+            data-view="flips"
+          >
+            Flip track record <span class="tab-count" id="count-flips">0</span>
+          </button>
+          <button
+            type="button"
+            class="tab"
+            role="tab"
+            id="tab-rentals"
+            aria-selected="false"
+            aria-controls="panel"
+            data-view="rentals"
+          >
+            Rental experience <span class="tab-count" id="count-rentals">0</span>
+          </button>
+        </div>
+
+        <section class="metrics" id="metrics" aria-label="Headline stats"></section>
+
+        <section class="table-section" id="panel" role="tabpanel" aria-labelledby="tab-flips">
+          <div class="section-head">
+            <h2 id="section-heading">Property table</h2>
+            <p class="section-caption" id="section-caption"></p>
+          </div>
+
+          <div class="filters">
+            <div class="filter-grid filter-grid-4">
+              <label class="field">
+                <span>Search</span>
+                <input
+                  type="search"
+                  id="filter-query"
+                  placeholder="Address, city, or entity"
+                  autocomplete="off"
+                />
+              </label>
+              <label class="field">
+                <span>Status</span>
+                <select id="filter-status"></select>
+              </label>
+              <label class="field">
+                <span>Strategy</span>
+                <select id="filter-strategy">
+                  <option value="All">All strategies</option>
+                  <option value="Flip">Flip</option>
+                  <option value="Rental">Rental</option>
+                  <option value="Wholesale">Wholesale</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Type</span>
+                <select id="filter-type"></select>
+              </label>
+            </div>
+            <div class="filter-grid filter-grid-3">
+              <label class="field">
+                <span>Market</span>
+                <select id="filter-market"></select>
+              </label>
+              <label class="field">
+                <span>Sort by</span>
+                <select id="sort-key">
+                  <option value="saleDate">Sale date</option>
+                  <option value="salePrice">Sale price</option>
+                  <option value="purchaseDate">Purchase date</option>
+                  <option value="purchasePrice">Purchase price</option>
+                  <option value="rehab">Rehab</option>
+                  <option value="address">Property</option>
+                  <option value="strategy">Strategy</option>
+                  <option value="status">Status</option>
+                  <option value="type">Property type</option>
+                  <option value="entity">Entity</option>
+                </select>
+              </label>
+              <fieldset class="field sort-dir">
+                <legend>Order</legend>
+                <div class="segmented" role="group" aria-label="Sort direction">
+                  <button type="button" class="seg is-active" data-dir="desc">
+                    Descending
+                  </button>
+                  <button type="button" class="seg" data-dir="asc">Ascending</button>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="table-wrap" id="table-wrap">
+            <p class="loading" id="loading">Loading track record…</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p id="footer-asof"></p>
+      </footer>
+    </div>
+
+    <button type="button" class="back-to-top" id="back-to-top" hidden>
+      Back to top
+    </button>
+    <script src="app.js"></script>
+  </body>
+</html>
